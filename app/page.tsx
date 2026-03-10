@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { FileText, BarChart3, Scale, Globe, Layers, Landmark, ArrowRight, Shield, Award, Users, Building2 } from 'lucide-react';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 const services = [
   {
     title: 'TP Documentation',
@@ -52,7 +54,14 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <section className="relative bg-brand-navy text-white overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-navy-light to-brand-navy" />
+        <div className="absolute inset-0">
+          <img
+            src={`${basePath}/images/hero-global.jpg`}
+            alt=""
+            className="w-full h-full object-cover opacity-20"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-navy-light/90 to-brand-navy" />
+        </div>
         <div className="relative container-wide section-padding py-24 lg:py-32">
           <div className="max-w-3xl">
             <p className="text-brand-teal-light font-semibold text-sm uppercase tracking-wider mb-4">
@@ -68,7 +77,7 @@ export default function HomePage() {
               with robust, defensible positions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+              <Link href="/consultation" className="btn-primary text-lg px-8 py-4">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -131,18 +140,27 @@ export default function HomePage() {
       {/* Why Kubaro */}
       <section className="section-padding bg-brand-cream">
         <div className="container-wide">
-          <div className="max-w-3xl mx-auto text-center">
-            <Building2 className="h-12 w-12 text-brand-teal mx-auto mb-6" />
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-charcoal mb-6">
-              Why Kubaro?
-            </h2>
-            <p className="text-brand-gray-mid text-lg leading-relaxed mb-8">
-              We combine deep technical expertise with practical business insight.
-              Our team has advised on transfer pricing matters across industries
-              including technology, pharmaceuticals, financial services, manufacturing,
-              and natural resources. We deliver work that stands up to scrutiny from
-              tax authorities worldwide.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-8">
+            <div>
+              <Building2 className="h-12 w-12 text-brand-teal mb-6" />
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-charcoal mb-6">
+                Why Kubaro?
+              </h2>
+              <p className="text-brand-gray-mid text-lg leading-relaxed">
+                We combine deep technical expertise with practical business insight.
+                Our team has advised on transfer pricing matters across industries
+                including technology, pharmaceuticals, financial services, manufacturing,
+                and natural resources. We deliver work that stands up to scrutiny from
+                tax authorities worldwide.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg">
+              <img
+                src={`${basePath}/images/team-meeting.jpg`}
+                alt="Professional team collaborating on transfer pricing strategy"
+                className="w-full h-72 object-cover"
+              />
+            </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8 mt-8">
             <div className="text-center p-6">
@@ -187,24 +205,39 @@ export default function HomePage() {
                 )}
               </ul>
             </div>
-            <div className="bg-brand-cream rounded-2xl p-8 text-center">
-              <Scale className="h-16 w-16 text-brand-teal mx-auto mb-4" />
-              <h3 className="font-heading text-2xl font-bold mb-2">OECD Aligned</h3>
-              <p className="text-brand-gray-mid mb-6">
-                Our methodologies follow the latest OECD Transfer Pricing Guidelines
-                and BEPS Actions 8-10, ensuring global consistency and compliance.
-              </p>
-              <Link href="/services" className="btn-primary">
-                View Our Services
-              </Link>
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src={`${basePath}/images/industry-office.jpg`}
+                alt="Modern business environment"
+                className="w-full h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-brand-navy/70 flex flex-col items-center justify-center p-8 text-center text-white">
+                <Scale className="h-16 w-16 text-brand-teal-light mb-4" />
+                <h3 className="font-heading text-2xl font-bold mb-2">OECD Aligned</h3>
+                <p className="text-gray-200 mb-6">
+                  Our methodologies follow the latest OECD Transfer Pricing Guidelines
+                  and BEPS Actions 8-10, ensuring global consistency and compliance.
+                </p>
+                <Link href="/services" className="btn-primary">
+                  View Our Services
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-brand-navy text-white section-padding">
-        <div className="container-wide text-center">
+      <section className="relative bg-brand-navy text-white section-padding overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={`${basePath}/images/handshake.jpg`}
+            alt=""
+            className="w-full h-full object-cover opacity-15"
+          />
+          <div className="absolute inset-0 bg-brand-navy/80" />
+        </div>
+        <div className="relative container-wide text-center">
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mb-4">
             Ready to Strengthen Your TP Position?
           </h2>

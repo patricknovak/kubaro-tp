@@ -10,6 +10,8 @@ import {
   Globe,
 } from 'lucide-react';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export const metadata: Metadata = {
   title: 'About Us',
   description:
@@ -66,8 +68,15 @@ export default function AboutPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-r from-brand-navy to-brand-navy-light text-white">
-        <div className="container-wide">
+      <section className="relative section-padding bg-gradient-to-r from-brand-navy to-brand-navy-light text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={`${basePath}/images/about-team.jpg`}
+            alt=""
+            className="w-full h-full object-cover opacity-15"
+          />
+        </div>
+        <div className="relative container-wide">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             About Kubaro
           </h1>
@@ -141,9 +150,16 @@ export default function AboutPage() {
       {/* Our Approach */}
       <section id="approach" className="section-padding bg-gray-50 scroll-mt-32">
         <div className="container-wide">
-          <h2 className="font-heading text-3xl font-bold text-brand-charcoal mb-12 text-center">
+          <h2 className="font-heading text-3xl font-bold text-brand-charcoal mb-6 text-center">
             Our Approach
           </h2>
+          <div className="mb-12 rounded-2xl overflow-hidden max-w-4xl mx-auto">
+            <img
+              src={`${basePath}/images/analysis-data.jpg`}
+              alt="Data-driven transfer pricing analysis and methodology"
+              className="w-full h-64 object-cover"
+            />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg border-l-4 border-brand-teal shadow-md">
               <h3 className="font-heading text-2xl font-bold text-brand-charcoal mb-4">
@@ -198,8 +214,15 @@ export default function AboutPage() {
       </section>
 
       {/* Regulatory Expertise */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-wide">
+      <section className="relative section-padding bg-gray-50 overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <img
+            src={`${basePath}/images/global-map.jpg`}
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="relative container-wide">
           <h2 className="font-heading text-3xl font-bold text-brand-charcoal mb-12 text-center">
             Regulatory Expertise
           </h2>
