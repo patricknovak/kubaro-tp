@@ -1,0 +1,109 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-navy-50: #f0f3f8;
+  --color-navy-100: #d9e1ee;
+  --color-navy-200: #b3c3dd;
+  --color-navy-300: #8da5cc;
+  --color-navy-400: #6787bb;
+  --color-navy-500: #4169aa;
+  --color-navy-600: #2e4f8a;
+  --color-navy-700: #1B365D;
+  --color-navy-800: #142845;
+  --color-navy-900: #0d1a2e;
+
+  --color-gold-50: #fdf8ee;
+  --color-gold-100: #f9edcf;
+  --color-gold-200: #f3db9f;
+  --color-gold-300: #edc96f;
+  --color-gold-400: #d4a83a;
+  --color-gold-500: #C5922E;
+  --color-gold-600: #a57824;
+  --color-gold-700: #855f1d;
+  --color-gold-800: #654716;
+  --color-gold-900: #45300f;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+  }
+}
+
+@utility btn-primary {
+  display: inline-block;
+  background-color: var(--color-gold-500);
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: var(--color-gold-600);
+  }
+}
+
+@utility btn-secondary {
+  display: inline-block;
+  border: 2px solid var(--color-navy-700);
+  color: var(--color-navy-700);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 0.2s;
+  &:hover {
+    background-color: var(--color-navy-700);
+    color: white;
+  }
+}
+
+@utility section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  @media (min-width: 768px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@utility container-narrow {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@utility card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s;
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+@utility gradient-navy {
+  background: linear-gradient(to bottom right, var(--color-navy-700), var(--color-navy-800), var(--color-navy-900));
+}

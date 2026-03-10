@@ -1,0 +1,391 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Pricing | Kubaro Transfer Pricing Advisory">
+  <!-- Hero Section -->
+  <section class="gradient-navy text-white py-20 sm:py-32">
+    <div class="container-narrow text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-6">Transparent Pricing</h1>
+      <p class="text-lg sm:text-xl text-gray-200">
+        No surprises. No hidden fees. Fixed-price engagements tailored to your needs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Tiers Section -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy-700 mb-4">Service Tiers</h2>
+        <p class="text-gray-600 text-lg">Choose the package that matches your complexity and scope</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Essentials Tier -->
+        <div class="card border-2 border-gray-200 hover:border-gold-500 transition">
+          <h3 class="text-2xl font-bold text-navy-700 mb-2">Essentials</h3>
+          <p class="text-gray-600 mb-6 text-sm">For single-entity groups or simple structures</p>
+
+          <div class="mb-8">
+            <span class="text-4xl font-bold text-gold-500">$8K–$15K</span>
+            <p class="text-gray-600 text-sm mt-2">Fixed-price engagement</p>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="font-semibold text-navy-700 mb-4">Includes:</h4>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Annual TP documentation (local file)</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Basic benchmarking study (1-2 methods)</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">CRA-ready formatting</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">One round of revisions</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">30 days delivery time</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href={`${base}contact`} class="btn-primary w-full">Get Started</a>
+        </div>
+
+        <!-- Professional Tier -->
+        <div class="card border-2 border-gold-500 ring-2 ring-gold-100 hover:shadow-xl transition relative">
+          <div class="absolute -top-4 left-6 bg-gold-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </div>
+
+          <h3 class="text-2xl font-bold text-navy-700 mb-2 mt-4">Professional</h3>
+          <p class="text-gray-600 mb-6 text-sm">For growing groups with multiple entities</p>
+
+          <div class="mb-8">
+            <span class="text-4xl font-bold text-gold-500">$15K–$40K</span>
+            <p class="text-gray-600 text-sm mt-2">Fixed-price engagement</p>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="font-semibold text-navy-700 mb-4">Includes:</h4>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Multi-entity TP documentation (local + master files)</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Comprehensive benchmarking studies</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Transfer pricing policy design</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Ongoing support (3 months)</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Two rounds of revisions</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">45 days delivery time</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href={`${base}contact`} class="btn-primary w-full">Get Started</a>
+        </div>
+
+        <!-- Enterprise Tier -->
+        <div class="card border-2 border-gray-200 hover:border-gold-500 transition">
+          <h3 class="text-2xl font-bold text-navy-700 mb-2">Enterprise</h3>
+          <p class="text-gray-600 mb-6 text-sm">For complex multinational structures</p>
+
+          <div class="mb-8">
+            <span class="text-4xl font-bold text-gold-500">Custom</span>
+            <p class="text-gray-600 text-sm mt-2">Scope-based pricing</p>
+          </div>
+
+          <div class="mb-8">
+            <h4 class="font-semibold text-navy-700 mb-4">Includes:</h4>
+            <ul class="space-y-3">
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Complex documentation and analysis</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">CRA audit defense support</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Pillar Two advisory and planning</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">IP valuation and licensing support</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Dedicated team & ongoing support</span>
+              </li>
+              <li class="flex gap-3">
+                <svg class="w-5 h-5 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+                <span class="text-gray-700 text-sm">Unlimited revisions & customization</span>
+              </li>
+            </ul>
+          </div>
+
+          <a href={`${base}contact`} class="btn-primary w-full">Contact Sales</a>
+        </div>
+      </div>
+
+      <div class="mt-12 p-8 bg-gold-50 rounded-lg text-center border border-gold-100">
+        <p class="text-gray-700">
+          <strong>All packages include:</strong> Expert analysis • CRA-compliant delivery • Fixed pricing • Transparent scope
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding bg-gray-50">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy-700 mb-4">Frequently Asked Questions</h2>
+        <p class="text-gray-600 text-lg">Common questions about our pricing and services</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        <!-- FAQ Item 1 -->
+        <details class="bg-white p-6 rounded-lg cursor-pointer group">
+          <summary class="flex items-center justify-between font-semibold text-navy-700 text-lg">
+            How does AI reduce costs compared to traditional consulting?
+            <svg class="w-5 h-5 text-gold-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Our AI-powered workflows automate data aggregation, analysis, and preliminary documentation. This eliminates manual data entry and reduces analysis time by approximately 60%. The time savings translate directly into cost savings for our clients, without compromising the quality of our expert review and analysis.
+          </p>
+        </details>
+
+        <!-- FAQ Item 2 -->
+        <details class="bg-white p-6 rounded-lg cursor-pointer group">
+          <summary class="flex items-center justify-between font-semibold text-navy-700 text-lg">
+            What's the typical timeline for a documentation engagement?
+            <svg class="w-5 h-5 text-gold-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Essentials tier typically takes 30 days from project kick-off to delivery. Professional tier takes 45 days. Enterprise projects are customized based on complexity. Timeline depends on how quickly you can provide necessary documentation and data. We maintain regular communication throughout the engagement to keep projects on track.
+          </p>
+        </details>
+
+        <!-- FAQ Item 3 -->
+        <details class="bg-white p-6 rounded-lg cursor-pointer group">
+          <summary class="flex items-center justify-between font-semibold text-navy-700 text-lg">
+            Do you offer monthly retainer or subscription plans?
+            <svg class="w-5 h-5 text-gold-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            We don't offer monthly subscriptions, but we do provide ongoing support options. The Professional tier includes 3 months of support. For Enterprise clients needing continuous advisory, we can structure custom retainer arrangements. Contact us to discuss your ongoing needs.
+          </p>
+        </details>
+
+        <!-- FAQ Item 4 -->
+        <details class="bg-white p-6 rounded-lg cursor-pointer group">
+          <summary class="flex items-center justify-between font-semibold text-navy-700 text-lg">
+            What if I'm currently under CRA audit?
+            <svg class="w-5 h-5 text-gold-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Audit defense is more time-sensitive and requires a customized scope. We typically engage at the Enterprise level with a focus on responding to CRA requests and developing a strong defense strategy. Reach out to us immediately so we can understand the audit timeline and develop an appropriate engagement plan.
+          </p>
+        </details>
+
+        <!-- FAQ Item 5 -->
+        <details class="bg-white p-6 rounded-lg cursor-pointer group">
+          <summary class="flex items-center justify-between font-semibold text-navy-700 text-lg">
+            Can I bundle multiple services at a discount?
+            <svg class="w-5 h-5 text-gold-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            Absolutely. Our pricing tiers are designed with bundled services in mind. The Professional and Enterprise tiers already include documentation, benchmarking, and policy design at bundled pricing. For custom combinations, contact us for a scope discussion and proposal.
+          </p>
+        </details>
+
+        <!-- FAQ Item 6 -->
+        <details class="bg-white p-6 rounded-lg cursor-pointer group">
+          <summary class="flex items-center justify-between font-semibold text-navy-700 text-lg">
+            What happens if scope changes during the engagement?
+            <svg class="w-5 h-5 text-gold-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </summary>
+          <p class="text-gray-700 mt-4 leading-relaxed">
+            We'll discuss scope changes transparently. Our fixed-price model means we've scoped the engagement carefully upfront. If scope expands significantly, we'll discuss pricing adjustments fairly. Minor scope adjustments are typically absorbed within the engagement.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare to Big 4 Section -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-navy-700 mb-4">Compare to Big 4</h2>
+        <p class="text-gray-600 text-lg">Same quality. Lower cost. Faster turnaround.</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead>
+            <tr class="border-b-2 border-navy-700">
+              <th class="text-left py-4 px-6 font-semibold text-navy-700">Feature</th>
+              <th class="text-center py-4 px-6 font-semibold text-navy-700">Kubaro</th>
+              <th class="text-center py-4 px-6 font-semibold text-gray-600">Big 4 Typical</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6 font-medium text-navy-700">TP Documentation Cost</td>
+              <td class="text-center py-4 px-6 text-gold-500 font-semibold">$8K–$15K</td>
+              <td class="text-center py-4 px-6 text-gray-600">$30K–$50K+</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6 font-medium text-navy-700">Typical Delivery Time</td>
+              <td class="text-center py-4 px-6 text-gold-500 font-semibold">30 days</td>
+              <td class="text-center py-4 px-6 text-gray-600">60–90 days</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6 font-medium text-navy-700">Expert Engagement Level</td>
+              <td class="text-center py-4 px-6 text-gold-500 font-semibold">Direct</td>
+              <td class="text-center py-4 px-6 text-gray-600">Senior analyst</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6 font-medium text-navy-700">AI-Powered Efficiency</td>
+              <td class="text-center py-4 px-6 text-gold-500 font-semibold">Yes</td>
+              <td class="text-center py-4 px-6 text-gray-600">Limited</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6 font-medium text-navy-700">Benchmarking Database Access</td>
+              <td class="text-center py-4 px-6 text-gold-500 font-semibold">Thomson Reuters</td>
+              <td class="text-center py-4 px-6 text-gray-600">Thomson Reuters</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="py-4 px-6 font-medium text-navy-700">Fixed Pricing</td>
+              <td class="text-center py-4 px-6 text-gold-500 font-semibold">Yes</td>
+              <td class="text-center py-4 px-6 text-gray-600">No (hourly)</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-medium text-navy-700">CRA Audit Defense</td>
+              <td class="text-center py-4 px-6 text-gold-500 font-semibold">Available</td>
+              <td class="text-center py-4 px-6 text-gray-600">Available</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-12 p-8 bg-navy-50 rounded-lg border border-navy-200">
+        <h3 class="text-xl font-bold text-navy-700 mb-4">Why Is Kubaro More Affordable?</h3>
+        <ul class="space-y-3">
+          <li class="flex gap-3">
+            <svg class="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-700"><strong>AI-Powered Workflows:</strong> We automate 60% of routine analysis, eliminating manual work.</span>
+          </li>
+          <li class="flex gap-3">
+            <svg class="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-700"><strong>No Corporate Overhead:</strong> We focus resources on client value, not administrative layers.</span>
+          </li>
+          <li class="flex gap-3">
+            <svg class="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-700"><strong>Specialized Focus:</strong> Transfer pricing expertise only—no bench costs subsidizing other services.</span>
+          </li>
+          <li class="flex gap-3">
+            <svg class="w-5 h-5 text-gold-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span class="text-gray-700"><strong>Fixed Pricing:</strong> You know the cost upfront. No surprise invoices or scope creep.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="section-padding bg-gradient-navy text-white">
+    <div class="container-narrow text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-6">Ready to Work with Kubaro?</h2>
+      <p class="text-lg mb-8 text-gray-200">
+        Let's discuss your transfer pricing needs and get a customized proposal.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={`${base}contact`} class="btn-primary">Schedule Consultation</a>
+        <a href={`${base}risk-assessment`} class="btn-secondary">Free Risk Assessment</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

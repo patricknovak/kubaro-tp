@@ -1,0 +1,32 @@
+{
+  "name": "kubaro-tp",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Kubaro Transfer Pricing Advisory - AI-powered transfer pricing consulting",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [
+    "transfer-pricing",
+    "canada",
+    "consulting",
+    "tax"
+  ],
+  "author": "James Crow",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/react": "^5.0.0",
+    "@astrojs/sitemap": "^3.7.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/postcss": "^4.2.1",
+    "astro": "^6.0.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.1"
+  }
+}

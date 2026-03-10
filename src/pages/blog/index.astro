@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
+
+// Placeholder blog posts
+const blogPosts = [
+  {
+    id: 1,
+    slug: 'budget-2025-transfer-pricing-changes',
+    title: 'Budget 2025: Transfer Pricing Changes Explained',
+    excerpt: 'Key changes to Canadian transfer pricing rules announced in Budget 2025 and what they mean for your compliance strategy.',
+    category: 'Regulatory Updates',
+    date: 'Mar 5, 2025',
+    readTime: '5 min read',
+  },
+  {
+    id: 2,
+    slug: 'how-to-prepare-tp-documentation-canada',
+    title: 'How to Prepare TP Documentation for CRA',
+    excerpt: 'Step-by-step guide to preparing compliant transfer pricing documentation that passes CRA review.',
+    category: 'How-To Guides',
+    date: 'Mar 1, 2025',
+    readTime: '8 min read',
+  },
+  {
+    id: 3,
+    slug: 'cra-audit-defense-strategies',
+    title: 'CRA Audit Defense: Proven Strategies',
+    excerpt: 'How to effectively defend your transfer pricing positions during CRA audits and reassessments.',
+    category: 'Industry Focus',
+    date: 'Feb 25, 2025',
+    readTime: '6 min read',
+  },
+  {
+    id: 4,
+    slug: 'transfer-pricing-digital-economy',
+    title: 'Transfer Pricing in the Digital Economy',
+    excerpt: 'Navigating transfer pricing challenges for digital services, intangible assets, and software licensing.',
+    category: 'Case Studies',
+    date: 'Feb 18, 2025',
+    readTime: '7 min read',
+  },
+];
+
+const categories = [
+  'All',
+  'Regulatory Updates',
+  'How-To Guides',
+  'Industry Focus',
+  'Case Studies',
+];
+---
+
+<BaseLayout title="Blog | Kubaro Transfer Pricing Advisory">
+  <!-- Hero Section -->
+  <section class="gradient-navy text-white py-20 sm:py-32">
+    <div class="container-narrow text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold mb-6">Insights & Analysis</h1>
+      <p class="text-lg sm:text-xl text-gray-200">
+        Expert insights on transfer pricing, regulatory updates, and business strategy
+      </p>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="bg-white border-b border-gray-200">
+    <div class="container-narrow py-8">
+      <div class="flex overflow-x-auto gap-2 pb-2">
+        {categories.map((category) => (
+          <button
+            class={`px-6 py-2 rounded-full font-semibold whitespace-nowrap transition ${
+              category === 'All'
+                ? 'bg-gold-500 text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {blogPosts.map((post) => (
+          <a
+            href={`${base}blog/${post.slug}`}
+            class="card hover:shadow-lg transition group"
+          >
+            <div class="mb-4">
+              <span class="inline-block px-3 py-1 text-xs font-semibold text-gold-500 bg-gold-50 rounded-full">
+                {post.category}
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-navy-700 mb-3 group-hover:text-gold-500 transition">
+              {post.title}
+            </h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              {post.excerpt}
+            </p>
+            <div class="flex items-center justify-between text-xs text-gray-500 mt-6 pt-4 border-t border-gray-100">
+              <span>{post.date}</span>
+              <span>{post.readTime}</span>
+            </div>
+            <div class="mt-4 text-sm font-semibold text-gold-500">
+              Read More →
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup Section -->
+  <section class="section-padding bg-gold-50">
+    <div class="container-narrow max-w-2xl mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-navy-700 mb-4">Stay Updated</h2>
+        <p class="text-gray-700 text-lg">
+          Get insights on transfer pricing and regulatory updates delivered to your inbox.
+        </p>
+      </div>
+
+      <form class="flex flex-col sm:flex-row gap-3" onsubmit="return false;">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:border-gold-500 focus:outline-none"
+          required
+        />
+        <button
+          type="submit"
+          class="btn-primary whitespace-nowrap"
+        >
+          Subscribe
+        </button>
+      </form>
+
+      <p class="text-xs text-gray-600 text-center mt-4">
+        We respect your privacy. Unsubscribe at any time.
+      </p>
+    </div>
+  </section>
+
+  <!-- Additional CTA -->
+  <section class="section-padding bg-white">
+    <div class="container-narrow text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-navy-700 mb-6">
+        Can't find what you're looking for?
+      </h2>
+      <p class="text-gray-600 mb-8">
+        Contact us directly with your transfer pricing questions.
+      </p>
+      <a href={`${base}contact`} class="btn-primary">Get in Touch</a>
+    </div>
+  </section>
+</BaseLayout>
