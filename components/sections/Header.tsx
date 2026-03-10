@@ -18,6 +18,7 @@ const navigation = [
     ],
   },
   { name: 'Resources', href: '/resources' },
+  { name: 'Voice Consultation', href: '/voice-consultation' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
