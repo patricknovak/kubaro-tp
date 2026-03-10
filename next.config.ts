@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: process.env.GITHUB_PAGES === 'true' ? '/wc-con-platform' : '',
+  basePath: process.env.GITHUB_PAGES === 'true' ? '/kubaro-tp' : '',
   images: {
     unoptimized: true,
     remotePatterns: [
