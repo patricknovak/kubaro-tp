@@ -9,6 +9,17 @@ import {
   Globe,
 } from 'lucide-react';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
+const serviceImages: Record<string, { src: string; alt: string }> = {
+  documentation: { src: `${basePath}/images/svc-documentation.jpg`, alt: 'Transfer pricing documentation and compliance' },
+  benchmarking: { src: `${basePath}/images/svc-benchmarking.jpg`, alt: 'Financial benchmarking and data analysis' },
+  apa: { src: `${basePath}/images/svc-apa.jpg`, alt: 'Advance pricing agreement negotiation' },
+  disputes: { src: `${basePath}/images/svc-disputes.jpg`, alt: 'Tax dispute resolution and audit defense' },
+  'value-chain': { src: `${basePath}/images/svc-valuechain.jpg`, alt: 'Global value chain analysis' },
+  'ip-valuation': { src: `${basePath}/images/svc-ipvaluation.jpg`, alt: 'Intellectual property valuation' },
+};
+
 export const metadata: Metadata = {
   title: 'Services',
   description:
@@ -111,8 +122,15 @@ export default function ServicesPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-r from-brand-navy to-brand-navy-light text-white">
-        <div className="container-wide">
+      <section className="relative section-padding bg-gradient-to-r from-brand-navy to-brand-navy-light text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={`${basePath}/images/services-hero.jpg`}
+            alt=""
+            className="w-full h-full object-cover opacity-15"
+          />
+        </div>
+        <div className="relative container-wide">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             Our Services
           </h1>
@@ -129,6 +147,7 @@ export default function ServicesPage() {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             const isEven = index % 2 === 0;
+            const image = serviceImages[service.id];
             return (
               <div
                 key={service.id}
@@ -138,6 +157,15 @@ export default function ServicesPage() {
                 }`}
               >
                 <div className={!isEven ? 'lg:order-2' : ''}>
+                  {image && (
+                    <div className="rounded-xl overflow-hidden mb-6">
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        className="w-full h-48 object-cover"
+                      />
+                    </div>
+                  )}
                   <div className="flex items-center gap-4 mb-4">
                     <IconComponent className="w-10 h-10 text-brand-teal flex-shrink-0" />
                     <h2 className="font-heading text-2xl md:text-3xl font-bold text-brand-charcoal">
@@ -178,7 +206,7 @@ export default function ServicesPage() {
             to schedule a confidential consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn-primary bg-white text-brand-teal hover:bg-gray-100">
+            <Link href="/consultation" className="btn-primary bg-white text-brand-teal hover:bg-gray-100">
               Schedule a Consultation
             </Link>
             <Link

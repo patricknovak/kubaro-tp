@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { ChevronRight, Mail, MapPin, Clock } from 'lucide-react';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 interface ContactForm {
   name: string;
   email: string;
@@ -51,7 +53,16 @@ export default function ContactClient() {
 
     setIsSubmitting(true);
     try {
-      // For static site, show success message
+      // TODO: Wire up form submission backend. Options:
+      // 1. Formspree: POST to https://formspree.io/f/YOUR_FORM_ID
+      //    const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      //      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      //      body: JSON.stringify(formData),
+      //    });
+      // 2. EmailJS: emailjs.send('service_id', 'template_id', formData, 'public_key')
+      // 3. Custom API: POST to your own backend endpoint
+      //
+      // For now, show success message (no data is sent):
       setSubmitSuccess(true);
       setFormData({
         name: '',
@@ -85,8 +96,15 @@ export default function ContactClient() {
       </div>
 
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-r from-brand-navy to-brand-navy-light text-white">
-        <div className="container-wide">
+      <section className="relative section-padding bg-gradient-to-r from-brand-navy to-brand-navy-light text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={`${basePath}/images/contact-office.jpg`}
+            alt=""
+            className="w-full h-full object-cover opacity-15"
+          />
+        </div>
+        <div className="relative container-wide">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             Contact Us
           </h1>

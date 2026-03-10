@@ -17,6 +17,7 @@ const navigation = [
       { name: 'IP Valuation', href: '/services#ip-valuation' },
     ],
   },
+  { name: 'Resources', href: '/resources' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -85,7 +86,7 @@ export function Header() {
                 </Link>
               )
             )}
-            <Link href="/contact" className="ml-4 btn-primary text-sm px-5 py-2">
+            <Link href="/consultation" className="ml-4 btn-primary text-sm px-5 py-2">
               Schedule a Consultation
             </Link>
           </div>
@@ -139,7 +140,7 @@ export function Header() {
               )
             )}
             <div className="pt-4 px-3">
-              <Link href="/contact" className="btn-primary w-full text-center" onClick={() => setMobileOpen(false)}>
+              <Link href="/consultation" className="btn-primary w-full text-center" onClick={() => setMobileOpen(false)}>
                 Schedule a Consultation
               </Link>
             </div>
