@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://patricknovak.github.io/kubaro-tp/sitemap-index.xml

@@ -1,26 +1,31 @@
 {
-  "name": "kubaro-tp",
-  "type": "module",
+  "name": "@kubaro/tp-web",
   "version": "1.0.0",
-  "description": "Kubaro Transfer Pricing Advisory - AI-powered transfer pricing consulting",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
   },
-  "keywords": ["transfer-pricing", "canada", "consulting", "tax"],
-  "author": "James Crow",
-  "license": "ISC",
   "dependencies": {
-    "@astrojs/mdx": "^5.0.0",
-    "@astrojs/react": "^5.0.0",
-    "@astrojs/sitemap": "^3.7.1",
-    "@tailwindcss/postcss": "^4.2.1",
-    "astro": "^6.0.1",
+    "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "tailwindcss": "^4.2.1"
+    "@anthropic-ai/sdk": "^0.30.0",
+    "lucide-react": "^0.400.0",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.5.0",
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0",
+    "@tailwindcss/typography": "^0.5.0"
   }
 }
